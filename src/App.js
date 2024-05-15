@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css'; 
+import Taskleiste from './components/Taskleiste';
+import Quizblock from './components/QuizBlock';
 
 function App() {
+
+  const handleMatrizenClick = () => {
+    console.log('Matrizentest wurde ausgewählt');
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Taskleiste />
+      <h2>Wählen Sie bitte einer drei Quiz-Möglichkeiten aus!</h2>
+      <div className="quiz-container">
+        <Quizblock
+          title="Matrizentest"
+          description="Wählen Sie das richtige Bild um die Matrix zu vervollständigen"
+          imageUrl={require('./resources/images/Example 1br.png')}
+          onClick={handleMatrizenClick}
+        />
+        <Quizblock
+          title="Kreativitätstest"
+          description="Lass deine Kreativität freien Lauf und beantworte alle Fragen"
+          imageUrl="url_zum_bild_des_kreativitätstests"
+        />
+        <Quizblock
+          title="Persönlichkeitstest"
+          description="Führe eine Selbstreflexion aus und bewerte dich selber"
+          imageUrl="url_zum_bild_des_persönlichkeitstests"
+        />
+      </div>
     </div>
   );
 }
