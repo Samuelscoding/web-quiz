@@ -23,12 +23,12 @@ function App() {
         <Quizblock
           title="Kreativitätstest"
           description="Lass deine Kreativität freien Lauf und beantworte alle Fragen"
-          imageUrl="url_zum_bild_des_kreativitätstests"
+          imageUrl={require('./resources/images/Kreativitätstest.jpg')}
         />
         <Quizblock
           title="Persönlichkeitstest"
           description="Führe eine Selbstreflexion aus und bewerte dich selber"
-          imageUrl="url_zum_bild_des_persönlichkeitstests"
+          imageUrl={require('./resources/images/Persönlichkeitstest.png')}
         />
       </div>
     </div>
