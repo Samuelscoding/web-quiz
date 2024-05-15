@@ -24,11 +24,13 @@ function App() {
           title="Kreativitätstest"
           description="Lass deine Kreativität freien Lauf und beantworte alle Fragen"
           imageUrl={require('./resources/images/Kreativitätstest.jpg')}
+          isDisabled={true}
         />
         <Quizblock
           title="Persönlichkeitstest"
           description="Führe eine Selbstreflexion aus und bewerte dich selber"
           imageUrl={require('./resources/images/Persönlichkeitstest.png')}
+          isDisabled={true}
         />
       </div>
     </div>

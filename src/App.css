@@ -30,6 +30,7 @@ h1{
   align-items: center; 
   flex-wrap: wrap;
   margin-top: 200px;
+  position: relative;
 }
 
 .quiz-block{
@@ -39,9 +40,28 @@ h1{
   width: 200px;
   height: 300px;
   cursor: pointer;
+  position: relative;
 }
 
 .quiz-block img{
   max-width: 100%;
   height: 150px;
+}
+
+.quiz-block.disabled {
+  opacity: 0.5; 
+  cursor: not-allowed; 
+}
+
+.quiz-block.disabled:hover::after {
+  content: "Momentan nicht verfügbar"; 
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
